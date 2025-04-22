@@ -57,7 +57,7 @@ The application will open in your default browser at `http://localhost:3000`.
 
 - `npm start` - Runs the app in development mode
 - `npm test` - Runs the test suite
-- `npm run build` - Builds the app for production
+- `npm run dev` - Builds the app for production
 - `npm run eject` - Ejects from create-react-app
 
 ## Project Structure

@@ -28,8 +28,6 @@ Job Board is a full-stack web application where users can post and search for de
 job-board/ ├── client/ # React frontend ├── server/ # Node/Express backend ├── .gitignore ├── README.md
 
 yaml
-Copy
-Edit
 
 ---
 
@@ -70,7 +68,11 @@ Terminal 1 – Start the backend:
 cd server
 npm start
 
+```
+
 Terminal 2 – Start the frontend:
+
+```bash
 
 cd client
 npm start
