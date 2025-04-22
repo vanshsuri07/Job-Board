@@ -42,12 +42,14 @@ These steps will help you run the project locally.
 ```bash
 git clone https://github.com/vanshsuri07/job-board.git
 cd job-board
-2️⃣ Install Dependencies
+```
+
+### 2️⃣ Install Dependencies
+
 Install packages for both frontend and backend:
 
-bash
-Copy
-Edit
+```bash
+
 # For frontend
 cd client
 npm install
@@ -55,29 +57,35 @@ npm install
 # For backend
 cd ../server
 npm install
-3️⃣ Run the App Locally
+```
+
+### 3. Run the App Locally
+
 Open two terminals:
 
 Terminal 1 – Start the backend:
 
-bash
+````bash
 
 cd server
 npm start
 Terminal 2 – Start the frontend:
 
-bash
+```bash
 
 cd client
 npm start
+````
+
 Then open your browser and go to:
 👉 http://localhost:3000
 
-🌐 Live Demo
-✅ Live demo hosted on Render:
-👉 https://job-board-l3b0.onrender.com
+### 🌐 Live Demo
 
-🔐 Environment Variables
+🚧 Live demo coming soon on Render
+
+### 🔐 Environment Variables
+
 In the /server folder, create a .env file and add:
 
 env
@@ -85,12 +93,13 @@ env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-⚠️ Keep this file private. Never upload it to GitHub.
 
+### ⚠️ Keep this file private. Never upload it to GitHub.
 
-🧾 License
+### 🧾 License
+
 This project is open source and available under the MIT License.
 
-🙌 Credits
+### 🙌 Credits
+
 Made with ❤️ by Vansh Suri
-```
