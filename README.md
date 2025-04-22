@@ -65,24 +65,23 @@ Open two terminals:
 
 Terminal 1 – Start the backend:
 
-````bash
+```bash
 
 cd server
 npm start
-Terminal 2 – Start the frontend:
 
-```bash
+Terminal 2 – Start the frontend:
 
 cd client
 npm start
-````
+
+```
 
 Then open your browser and go to:
 👉 http://localhost:3000
 
-### 🌐 Live Demo
-
-🚧 Live demo coming soon on Render
+🚀 **Live Demo:**
+https://job-board-l3b0.onrender.com
 
 ### 🔐 Environment Variables
 
@@ -94,7 +93,7 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 
-### ⚠️ Keep this file private. Never upload it to GitHub.
+⚠️ Keep this file private. Never upload it to GitHub.
 
 ### 🧾 License
 
