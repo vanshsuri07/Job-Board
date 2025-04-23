@@ -66,7 +66,7 @@ Terminal 1 – Start the backend:
 ```bash
 
 cd server
-npm start
+npm run server
 
 ```
 
