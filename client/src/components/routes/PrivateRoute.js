@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../../redux/features/alertSlice";
-import axios from "axios";
 import { setUser } from "../../redux/features/auth/authSlice";
-
-import { useNavigate, Navigate } from "react-router-dom";
+import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useSelector((state) => state.auth);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const getUser = async () => {
     try {
       dispatch(showLoading());
@@ -22,31 +21,27 @@ const PrivateRoute = ({ children }) => {
           },
         }
       );
-
       dispatch(hideLoading());
-      if (data.success) {
-        dispatch(setUser(data.data));
-      } else {
-        localStorage.clear();
-        navigate("/login");
-      }
+      dispatch(setUser(data.data)); // assuming your backend returns user under `data.data`
     } catch (error) {
-      localStorage.clear();
       dispatch(hideLoading());
-      console.log(error);
+      localStorage.clear();
     }
   };
+
   useEffect(() => {
     if (!user) {
       getUser();
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
 
-  if (localStorage.getItem("token")) {
-    return children;
-  } else {
+  // No token = not logged in
+  if (!localStorage.getItem("token")) {
     return <Navigate to="/login" />;
   }
+
+  return children;
 };
 
 export default PrivateRoute;
