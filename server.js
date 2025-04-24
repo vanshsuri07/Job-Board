@@ -41,7 +41,7 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-app.use("*/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
+app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(spec));
 
 app.use("/api/v1/test", testRoutes);
 app.use("/api/v1/auth", authRoutes);
