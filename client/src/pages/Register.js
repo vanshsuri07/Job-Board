@@ -26,12 +26,15 @@ const Register = () => {
         return toast.error("Please Provide All Fields");
       }
       dispatch(showLoading());
-      const { data } = await axios.post("/api/v1/auth/register", {
-        name,
-        lastName,
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/v1/auth/register`,
+        {
+          name,
+          lastName,
+          email,
+          password,
+        }
+      );
       dispatch(hideLoading());
       if (data.success) {
         toast.success("Register Successfully");
