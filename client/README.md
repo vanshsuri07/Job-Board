@@ -16,7 +16,7 @@ This is the frontend client for the Job Board application, a platform that conne
 - Redux for state management
 - CSS/SCSS for styling
 - Axios for API communication
-
+  
 ## Getting Started
 
 ### Prerequisites
