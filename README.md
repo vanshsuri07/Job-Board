@@ -83,7 +83,7 @@ Then open your browser and go to:
 👉 http://localhost:3000
 
 🚀 **Live Demo:**
-job-board-ni42.vercel.app
+https://job-board-ni42.vercel.app
 
 ### 🔐 Environment Variables
 
