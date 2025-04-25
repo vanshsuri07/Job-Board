@@ -14,7 +14,7 @@ const PrivateRoute = ({ children }) => {
     try {
       dispatch(showLoading());
       const { data } = await axios.post(
-        "/api/v1/user/getUser",
+        `${process.env.REACT_APP_API_URL}/api/v1/user/getUser`,
         {},
         {
           headers: {
